@@ -3,17 +3,8 @@ import {
   Column,
   Entity,
   Index,
-  JoinColumn,
-  JoinTable,
-  ManyToMany,
-  ManyToOne,
-  OneToMany,
-  OneToOne,
-  PrimaryColumn,
-  PrimaryGeneratedColumn,
-  RelationId,
 } from 'typeorm';
-import { Links } from '../links/links.entity';
+// import { Links } from '../links/links.entity';
 
 @Entity('Users', { schema: 'public' })
 @Index('Users_email_key', ['email'], { unique: true })
@@ -26,21 +17,21 @@ export class Users extends BaseEntity {
   })
   id: string;
 
-  @Column('character varying', {
+  @Column('varchar', {
     nullable: false,
     length: 26,
     name: 'name',
   })
   name: string;
 
-  @Column('character varying', {
+  @Column('varchar', {
     nullable: false,
     length: 230,
     name: 'email',
   })
   email: string;
 
-  @Column('character varying', {
+  @Column('varchar', {
     nullable: false,
     name: 'password',
   })
@@ -57,7 +48,7 @@ export class Users extends BaseEntity {
     name: 'updateAt',
   })
   updateAt: string;
-
-  @OneToMany(type => Links, Links => Links.owner)
-  linkss: Links[];
+  //
+  // @OneToMany(type => Links, Links => Links.owner)
+  // linkss: Links[];
 }

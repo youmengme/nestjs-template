@@ -7,6 +7,7 @@
     "no-unused-expression": true
   },
   "rules": {
+    "semicolon": false,
     "eofline": false,
     "indent": false,
     "quotemark": [
@@ -40,6 +41,7 @@
     "max-classes-per-file": [
       false
     ],
+    "trailing-comma": false,
     "variable-name": [
       false
     ],

@@ -10,7 +10,7 @@
     "target": "es6",
     "sourceMap": true,
     "allowJs": true,
-		"baseUrl": "./",
+    "baseUrl": "./",
     "outDir": "./dist"
   },
   "include": [

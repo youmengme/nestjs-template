@@ -39,7 +39,7 @@ Rest-API based in the
 ## Installation :wrench:
 
 ```bash
-$ npm install
+$ yarn 
 ```
 
 
@@ -47,13 +47,13 @@ $ npm install
 
 ```bash
 # unit tests
-$ npm run test
+$ yarn test
 
 # e2e tests
-$ npm run test:e2e
+$ yarn test:e2e
 
 # test coverage
-$ npm run test:cov
+$ yarn test:cov
 ```
 
 
@@ -61,16 +61,35 @@ $ npm run test:cov
 
 ```bash
 # development
-$ npm run start
+$ yarn start
 
 # watch mode
-$ npm run start:dev
+$ yarn start:dev
 
 # production mode
-$ npm run start:prod
+$ yarn start:prod
 ```
+## Get Configuration
+### in utils
+```typescript
+import { ConfigService } from './src/utils/config'
 
+ConfigService.getConfig(key)
+```
+### in modules
+```typescript
+// xxx/x.modules.ts
+import { ConfigModule } from '../../config/config.module'
 
+@Module({
+  imports: [
+    ConfigModule
+  ]
+})
+
+// xxx/x.service.ts
+
+```
 ## Environment variable :space_invader:
 
 The following are environment variables for different usage modules.
